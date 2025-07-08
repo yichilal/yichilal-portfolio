@@ -100,7 +100,7 @@ export default function About() {
                 Looking Forward
               </h2>
               <p className="text-lg">
-                As I approach my graduation in 2025, I'm excited about the
+                As a developer I approach my graduation in 2025, I'm excited about the
                 opportunities to apply my knowledge and skills in real-world
                 scenarios. I'm particularly interested in [your specific
                 interests in computer science] and looking forward to
