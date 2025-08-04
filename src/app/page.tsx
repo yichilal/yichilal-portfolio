@@ -5,12 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiFirebase, SiNextdotjs, SiReact, SiTypescript } from "react-icons/si";
+import Typewriter from "@/components/Typewriter";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <main className="min-h-[calc(100vh-4rem)]">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 dark:from-blue-900/30 dark:to-purple-900/30" />
           <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-gray-50 dark:from-gray-900 to-transparent" />
@@ -23,18 +24,52 @@ export default function Home() {
           className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         >
           <div className="text-center">
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-lg"
+            >
+              <Image
+                src="/yechuphoto.jpg"
+                alt="Yichilal Sileshi Mekonen"
+                width={160}
+                height={160}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4"
             >
               Yichilal Sileshi Mekonen
             </motion.h1>
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
+              className="h-8 mb-2 text-xl sm:text-2xl text-blue-600 dark:text-blue-400 font-medium"
+            >
+              <Typewriter 
+                words={[
+                  "Web Developer",
+                  "Mobile App Developer",
+                  "Full Stack Developer",
+                  "Front End Developer",
+                  "Back End Developer"
+                ]} 
+                delay={2000}
+                typingSpeed={100}
+                deletingSpeed={50}
+              />
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
               className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8"
             >
               Computer Science Student at Woldia University
@@ -95,7 +130,7 @@ export default function Home() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-20 bg-white dark:bg-gray-800">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
